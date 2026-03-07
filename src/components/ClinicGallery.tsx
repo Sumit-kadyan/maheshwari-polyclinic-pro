@@ -1,19 +1,67 @@
 import { motion, useInView, useAnimationFrame } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import clinicInterior from "@/assets/clinic-interior.jpg";
 import clinicExterior from "@/assets/clinic-exterior.jpg";
 import clinicConsultation from "@/assets/clinic-consultation.jpg";
 import doctorImg from "@/assets/doctor-portrait.jpg";
 
-const images = [
-  { src: doctorImg, alt: "Dr. Munesh Maheshwari", height: "h-[340px]" },
-  { src: clinicInterior, alt: "Maheshwari Polyclinic Interior", height: "h-[160px]" },
-  { src: clinicExterior, alt: "Maheshwari Polyclinic Exterior", height: "h-[160px]" },
-  { src: clinicConsultation, alt: "Consultation Room", height: "h-[240px]" },
-  { src: clinicInterior, alt: "Treatment Area", height: "h-[200px]" },
-  { src: doctorImg, alt: "Dr. Maheshwari Consulting", height: "h-[280px]" },
-  { src: clinicExterior, alt: "Clinic Entrance", height: "h-[180px]" },
-  { src: clinicConsultation, alt: "Modern Equipment", height: "h-[260px]" },
+// Pre-coded "random" collage layout — each group fills exactly 420px height
+// Groups are columns; items within a group stack vertically with a 8px gap
+const collageGroups = [
+  {
+    width: "w-[260px]",
+    items: [
+      { src: doctorImg, alt: "Dr. Munesh Maheshwari", h: "h-[420px]" },
+    ],
+  },
+  {
+    width: "w-[300px]",
+    items: [
+      { src: clinicInterior, alt: "Clinic Interior", h: "h-[240px]" },
+      { src: clinicExterior, alt: "Clinic Exterior", h: "h-[172px]" },
+    ],
+  },
+  {
+    width: "w-[220px]",
+    items: [
+      { src: clinicConsultation, alt: "Consultation Room", h: "h-[160px]" },
+      { src: doctorImg, alt: "Dr. Maheshwari Consulting", h: "h-[252px]" },
+    ],
+  },
+  {
+    width: "w-[280px]",
+    items: [
+      { src: clinicExterior, alt: "Clinic Entrance", h: "h-[280px]" },
+      { src: clinicInterior, alt: "Treatment Area", h: "h-[132px]" },
+    ],
+  },
+  {
+    width: "w-[240px]",
+    items: [
+      { src: clinicConsultation, alt: "Modern Equipment", h: "h-[190px]" },
+      { src: clinicExterior, alt: "Reception", h: "h-[222px]" },
+    ],
+  },
+  {
+    width: "w-[270px]",
+    items: [
+      { src: doctorImg, alt: "Patient Care", h: "h-[420px]" },
+    ],
+  },
+  {
+    width: "w-[300px]",
+    items: [
+      { src: clinicInterior, alt: "Waiting Area", h: "h-[170px]" },
+      { src: clinicConsultation, alt: "Clinic Facilities", h: "h-[242px]" },
+    ],
+  },
+  {
+    width: "w-[250px]",
+    items: [
+      { src: clinicExterior, alt: "Building View", h: "h-[300px]" },
+      { src: clinicInterior, alt: "Lab Area", h: "h-[112px]" },
+    ],
+  },
 ];
 
 const ClinicGallery = () => {
@@ -28,15 +76,16 @@ const ClinicGallery = () => {
     if (!scrollRef.current || !isSectionVisible || isHovered) return;
     const container = scrollRef.current;
     const maxScroll = container.scrollWidth - container.clientWidth;
-    scrollX.current += delta * 0.03; // very slow
+    scrollX.current += delta * 0.03;
     if (scrollX.current >= maxScroll) scrollX.current = 0;
     container.scrollLeft = scrollX.current;
   });
 
-  // Sync scrollX ref if user manually scrolls
   const handleScroll = () => {
     if (scrollRef.current) scrollX.current = scrollRef.current.scrollLeft;
   };
+
+  let itemIndex = 0;
 
   return (
     <section className="section-padding overflow-hidden" ref={sectionRef}>
@@ -54,28 +103,35 @@ const ClinicGallery = () => {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         onScroll={handleScroll}
-        className="flex gap-4 overflow-x-auto px-6 pb-4 scrollbar-hide cursor-grab active:cursor-grabbing"
-        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        className="flex gap-2 overflow-x-auto px-6 pb-4 cursor-grab active:cursor-grabbing"
+        style={{ scrollbarWidth: "none", msOverflowStyle: "none", WebkitOverflowScrolling: "touch" }}
       >
-        {images.map((img, i) => (
-          <motion.div
-            key={`${img.alt}-${i}`}
-            initial={{ opacity: 0, scale: 0.92 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.6, delay: i * 0.08, ease: [0.32, 0.72, 0, 1] }}
-            className={`flex-shrink-0 w-[280px] md:w-[320px] ${img.height} rounded-2xl overflow-hidden group relative`}
-          >
-            <img
-              src={img.src}
-              alt={img.alt}
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              loading="lazy"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <p className="absolute bottom-3 left-4 text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-2 group-hover:translate-y-0">
-              {img.alt}
-            </p>
-          </motion.div>
+        {collageGroups.map((group, gi) => (
+          <div key={gi} className={`flex-shrink-0 ${group.width} flex flex-col gap-2 h-[420px]`}>
+            {group.items.map((img) => {
+              const i = itemIndex++;
+              return (
+                <motion.div
+                  key={`${img.alt}-${i}`}
+                  initial={{ opacity: 0, scale: 0.92 }}
+                  animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                  transition={{ duration: 0.6, delay: i * 0.06, ease: [0.32, 0.72, 0, 1] }}
+                  className={`w-full ${img.h} rounded-2xl overflow-hidden group relative`}
+                >
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <p className="absolute bottom-3 left-4 text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-2 group-hover:translate-y-0">
+                    {img.alt}
+                  </p>
+                </motion.div>
+              );
+            })}
+          </div>
         ))}
       </div>
     </section>
