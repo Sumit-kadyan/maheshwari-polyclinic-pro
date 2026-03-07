@@ -49,14 +49,14 @@ const PatientReviews = () => {
       opacity: 1,
       scale: 1,
       rotateY: 0,
-      transition: { duration: 0.6, ease: [0.32, 0.72, 0, 1] },
+      transition: { duration: 0.6, ease: [0.32, 0.72, 0, 1] as [number, number, number, number] },
     },
     exit: (dir: number) => ({
       x: dir > 0 ? -300 : 300,
       opacity: 0,
       scale: 0.85,
       rotateY: dir > 0 ? -15 : 15,
-      transition: { duration: 0.5, ease: [0.32, 0.72, 0, 1] },
+      transition: { duration: 0.5, ease: [0.32, 0.72, 0, 1] as [number, number, number, number] },
     }),
   };
 
