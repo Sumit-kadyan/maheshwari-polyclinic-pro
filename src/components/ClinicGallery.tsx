@@ -4,6 +4,8 @@ import clinicInterior from "@/assets/clinic-interior.jpg";
 import clinicExterior from "@/assets/clinic-exterior.jpg";
 import clinicConsultation from "@/assets/clinic-consultation.jpg";
 import doctorImg from "@/assets/doctor-portrait.jpg";
+import clinicCabin from "@/assets/clinic-cabin.jpg";
+import clinicInterior2 from "@/assets/clinic-interior-2.jpg";
 
 // Pre-coded "random" collage layout — each group fills exactly 420px height
 // Groups are columns; items within a group stack vertically with a 8px gap
@@ -17,7 +19,7 @@ const collageGroups = [
   {
     width: "w-[300px]",
     items: [
-      { src: clinicInterior, alt: "Clinic Interior", h: "h-[240px]" },
+      { src: clinicCabin, alt: "Doctor's Cabin", h: "h-[240px]" },
       { src: clinicExterior, alt: "Clinic Exterior", h: "h-[172px]" },
     ],
   },
@@ -32,7 +34,7 @@ const collageGroups = [
     width: "w-[280px]",
     items: [
       { src: clinicExterior, alt: "Clinic Entrance", h: "h-[280px]" },
-      { src: clinicInterior, alt: "Treatment Area", h: "h-[132px]" },
+      { src: clinicInterior2, alt: "Clinic Interior", h: "h-[132px]" },
     ],
   },
   {
@@ -51,8 +53,8 @@ const collageGroups = [
   {
     width: "w-[300px]",
     items: [
-      { src: clinicInterior, alt: "Waiting Area", h: "h-[170px]" },
-      { src: clinicConsultation, alt: "Clinic Facilities", h: "h-[242px]" },
+      { src: clinicInterior2, alt: "Awards & Certificates", h: "h-[170px]" },
+      { src: clinicCabin, alt: "Clinic Facilities", h: "h-[242px]" },
     ],
   },
   {
