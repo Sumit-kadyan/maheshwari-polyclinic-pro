@@ -19,7 +19,7 @@ const collageGroups = [
   {
     width: "w-[300px]",
     items: [
-      { src: clinicInterior, alt: "Clinic Interior", h: "h-[240px]" },
+      { src: clinicCabin, alt: "Doctor's Cabin", h: "h-[240px]" },
       { src: clinicExterior, alt: "Clinic Exterior", h: "h-[172px]" },
     ],
   },
