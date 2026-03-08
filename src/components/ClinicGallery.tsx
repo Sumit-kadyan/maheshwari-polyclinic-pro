@@ -4,6 +4,8 @@ import clinicInterior from "@/assets/clinic-interior.jpg";
 import clinicExterior from "@/assets/clinic-exterior.jpg";
 import clinicConsultation from "@/assets/clinic-consultation.jpg";
 import doctorImg from "@/assets/doctor-portrait.jpg";
+import clinicCabin from "@/assets/clinic-cabin.jpg";
+import clinicInterior2 from "@/assets/clinic-interior-2.jpg";
 
 // Pre-coded "random" collage layout — each group fills exactly 420px height
 // Groups are columns; items within a group stack vertically with a 8px gap
