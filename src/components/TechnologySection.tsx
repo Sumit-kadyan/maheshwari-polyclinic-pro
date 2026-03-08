@@ -7,7 +7,7 @@ const features = [
   { icon: Lock, title: "Secure Patient Records", description: "End-to-end encrypted medical records for complete privacy" },
   { icon: Zap, title: "Efficient Management", description: "Streamlined patient flow for minimal waiting time" },
   { icon: Clock, title: "Faster Consultations", description: "Quick access to medical history speeds up every visit" },
-  { icon: Database, title: "Medical History Tracking", description: "Complete longitudinal health records at your fingertips" },
+  
 ];
 
 const TechnologySection = () => {
