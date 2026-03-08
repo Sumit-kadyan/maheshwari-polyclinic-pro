@@ -34,7 +34,7 @@ const collageGroups = [
     width: "w-[280px]",
     items: [
       { src: clinicExterior, alt: "Clinic Entrance", h: "h-[280px]" },
-      { src: clinicInterior, alt: "Treatment Area", h: "h-[132px]" },
+      { src: clinicInterior2, alt: "Clinic Interior", h: "h-[132px]" },
     ],
   },
   {
