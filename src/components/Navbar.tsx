@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
+import clinicLogo from "@/assets/clinic-logo.png";
 
 const navLinks = [
   { label: "Home", href: "#home" },
