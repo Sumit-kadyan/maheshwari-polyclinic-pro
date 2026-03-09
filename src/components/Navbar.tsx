@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
+import clinicLogo from "@/assets/clinic-logo.png";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -43,11 +44,7 @@ const Navbar = () => {
       <div className="section-container flex items-center justify-between px-4 sm:px-6 lg:px-8 h-16 sm:h-[72px]">
         {/* Logo */}
         <a href="#home" className="flex items-center gap-2.5 group">
-          <div className="w-9 h-9 rounded-xl gradient-primary flex items-center justify-center shadow-[0_2px_8px_-2px_hsl(var(--primary)/0.4)] transition-shadow duration-300 group-hover:shadow-[0_4px_14px_-2px_hsl(var(--primary)/0.5)]">
-            <span className="text-primary-foreground font-heading font-bold text-sm">
-              M
-            </span>
-          </div>
+          <img src={clinicLogo} alt="Maheshwari Polyclinic" className="w-9 h-9 object-contain" />
           <div className="hidden sm:block">
             <p className="font-heading font-bold text-sm text-foreground leading-tight">
               Maheshwari
