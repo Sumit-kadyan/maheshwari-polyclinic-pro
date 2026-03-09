@@ -93,7 +93,7 @@ const ClinicGallery = () => {
     <section className="section-padding overflow-hidden" ref={sectionRef}>
       <div className="section-container">
         <div className="text-center mb-14">
-          <span className="text-xs font-semibold text-primary uppercase tracking-widest">Gallery</span>
+          <span className="inline-block text-[11px] font-semibold uppercase tracking-[0.2em] text-primary bg-accent/60 px-4 py-1.5 rounded-full mb-5">Gallery</span>
           <h2 className="section-title mt-3">
             Our <span className="gradient-text">Clinic</span>
           </h2>
