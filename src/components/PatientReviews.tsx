@@ -138,7 +138,7 @@ const PatientReviews = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
-          <span className="inline-block text-xs font-semibold text-primary uppercase tracking-[0.25em] mb-4 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20">
+          <span className="inline-block text-[11px] font-semibold uppercase tracking-[0.2em] text-primary bg-accent/60 px-4 py-1.5 rounded-full mb-5">
             Patient Stories
           </span>
           <h2 className="section-title mt-3">

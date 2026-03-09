@@ -10,7 +10,7 @@ const ContactSection = () => {
     <section id="contact" className="section-padding bg-card" ref={ref}>
       <div className="section-container">
         <div className="text-center mb-14">
-          <span className="text-xs font-semibold text-primary uppercase tracking-widest">Contact</span>
+          <span className="inline-block text-[11px] font-semibold uppercase tracking-[0.2em] text-primary bg-accent/60 px-4 py-1.5 rounded-full mb-5">Contact</span>
           <h2 className="section-title mt-3">
             Get in <span className="gradient-text">Touch</span>
           </h2>
