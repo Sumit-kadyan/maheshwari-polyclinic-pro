@@ -35,7 +35,7 @@ const AboutDoctor = () => {
             <div className="rounded-3xl overflow-hidden" style={{ boxShadow: "var(--shadow-elevated)" }}>
               <img
                 src={doctorImg}
-                alt="Dr. Munesh Maheshwari"
+                alt="Dr. Munesh Maheshwari - Experienced Physician and Critical Care Doctor in Jaipur"
                 className="w-full aspect-[4/5] object-cover object-top"
                 loading="lazy"
               />
@@ -49,7 +49,7 @@ const AboutDoctor = () => {
           >
             <span className="inline-block text-[11px] font-semibold uppercase tracking-[0.2em] text-primary bg-accent/60 px-4 py-1.5 rounded-full mb-5">About the Doctor</span>
             <h2 className="section-title mt-3 mb-2">
-              Dr. Munesh <span className="gradient-text">Maheshwari</span>
+              About Dr. Munesh <span className="gradient-text">Maheshwari</span>
             </h2>
             <p className="text-lg font-medium text-primary mb-6">Critical Care Specialist (Physician)</p>
 

@@ -155,7 +155,7 @@ const ServicesSection = () => {
               Our Services
             </span>
             <h2 className="section-title mt-3">
-              Comprehensive <span className="gradient-text">Medical Care</span>
+              Comprehensive <span className="gradient-text">Medical Services</span> in Jaipur
             </h2>
             <p className="section-subtitle !mx-0 !text-left mt-5">
               From routine consultations to critical care, we provide a full spectrum of medical services with a patient-first approach.
