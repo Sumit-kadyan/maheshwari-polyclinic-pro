@@ -13,7 +13,7 @@ const collageGroups = [
   {
     width: "w-[260px]",
     items: [
-      { src: doctorImg, alt: "Dr. Munesh Maheshwari", h: "h-[420px]" },
+      { src: doctorImg, alt: "Dr. Munesh Maheshwari - Best Physician in Jaipur", h: "h-[420px]" },
     ],
   },
   {
