@@ -1,4 +1,5 @@
 import { Heart } from "lucide-react";
+import clinicLogo from "@/assets/clinic-logo.png";
 
 const Footer = () => {
   return (
@@ -7,9 +8,7 @@ const Footer = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-xl gradient-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-heading font-bold text-sm">M</span>
-              </div>
+              <img src={clinicLogo} alt="Maheshwari Polyclinic Logo" className="w-9 h-9 object-contain" width="36" height="36" />
               <div>
                 <p className="font-heading font-bold text-sm text-background">Maheshwari Polyclinic</p>
                 <p className="text-[10px] text-background/60">Multi Speciality Hi-Tech Clinic</p>
