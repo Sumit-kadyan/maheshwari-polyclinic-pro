@@ -26,8 +26,8 @@ const collageGroups = [
   {
     width: "w-[220px]",
     items: [
-      { src: clinicConsultation, alt: "Consultation Room", h: "h-[160px]" },
-      { src: doctorImg, alt: "Dr. Maheshwari Consulting", h: "h-[252px]" },
+      { src: clinicConsultation, alt: "Consultation room at multi-speciality clinic Jaipur", h: "h-[160px]" },
+      { src: doctorImg, alt: "Dr. Munesh Maheshwari consulting patient in Jaipur", h: "h-[252px]" },
     ],
   },
   {
