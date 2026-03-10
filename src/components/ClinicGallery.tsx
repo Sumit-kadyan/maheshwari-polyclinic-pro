@@ -53,8 +53,8 @@ const collageGroups = [
   {
     width: "w-[300px]",
     items: [
-      { src: clinicInterior2, alt: "Awards & Certificates", h: "h-[170px]" },
-      { src: clinicCabin, alt: "Clinic Facilities", h: "h-[242px]" },
+      { src: clinicInterior2, alt: "Awards and certificates at Maheshwari Polyclinic Jaipur", h: "h-[170px]" },
+      { src: clinicCabin, alt: "Hi-tech clinic facilities near Gopalpura Bypass Jaipur", h: "h-[242px]" },
     ],
   },
   {
