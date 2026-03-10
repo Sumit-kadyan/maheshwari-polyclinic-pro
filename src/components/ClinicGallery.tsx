@@ -47,7 +47,7 @@ const collageGroups = [
   {
     width: "w-[270px]",
     items: [
-      { src: doctorImg, alt: "Patient Care", h: "h-[420px]" },
+      { src: doctorImg, alt: "Patient care by Dr. Munesh Maheshwari critical care specialist Jaipur", h: "h-[420px]" },
     ],
   },
   {
