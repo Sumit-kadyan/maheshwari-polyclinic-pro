@@ -142,7 +142,7 @@ const PatientReviews = () => {
             Patient Stories
           </span>
           <h2 className="section-title mt-3">
-            What Our <span className="gradient-text">Patients Say</span>
+            Patient <span className="gradient-text">Reviews</span>
           </h2>
           <div className="flex items-center justify-center gap-3 mt-6">
             <div className="flex items-center gap-0.5 bg-accent/60 px-4 py-2 rounded-full border border-primary/10">

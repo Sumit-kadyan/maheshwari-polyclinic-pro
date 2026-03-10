@@ -60,8 +60,8 @@ const collageGroups = [
   {
     width: "w-[250px]",
     items: [
-      { src: clinicExterior, alt: "Building View", h: "h-[300px]" },
-      { src: clinicInterior, alt: "Lab Area", h: "h-[112px]" },
+      { src: clinicExterior, alt: "Maheshwari Polyclinic building near Triveni Nagar Jaipur", h: "h-[300px]" },
+      { src: clinicInterior, alt: "Diagnostic lab area at best clinic in Gopalpura Jaipur", h: "h-[112px]" },
     ],
   },
 ];

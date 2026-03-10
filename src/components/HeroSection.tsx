@@ -82,7 +82,7 @@ const HeroSection = () => {
               <div className="w-72 h-72 sm:w-80 sm:h-80 lg:w-[420px] lg:h-[420px] rounded-3xl overflow-hidden" style={{ boxShadow: "var(--shadow-elevated)" }}>
                 <img
                   src={doctorImg}
-                  alt="Dr. Munesh Maheshwari - Critical Care Specialist in Jaipur"
+                  alt="Dr. Munesh Maheshwari - Best Physician and Critical Care Specialist in Jaipur near Gopalpura Bypass"
                   className="w-full h-full object-cover object-top"
                   loading="eager"
                 />

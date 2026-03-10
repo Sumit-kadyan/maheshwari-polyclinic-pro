@@ -44,7 +44,7 @@ const Navbar = () => {
       <div className="section-container flex items-center justify-between px-4 sm:px-6 lg:px-8 h-16 sm:h-[72px]">
         {/* Logo */}
         <a href="#home" className="flex items-center gap-2.5 group">
-          <img src={clinicLogo} alt="Maheshwari Polyclinic" className="w-9 h-9 object-contain" />
+          <img src={clinicLogo} alt="Maheshwari Polyclinic – Best Multi Speciality Clinic in Jaipur" className="w-9 h-9 object-contain" width="36" height="36" />
           <div className="hidden sm:block">
             <p className="font-heading font-bold text-sm text-foreground leading-tight">
               Maheshwari
