@@ -9,7 +9,6 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <img src={clinicLogo} alt="Maheshwari Polyclinic Logo" className="w-9 h-9 object-contain" width="36" height="36" />
-              </div>
               <div>
                 <p className="font-heading font-bold text-sm text-background">Maheshwari Polyclinic</p>
                 <p className="text-[10px] text-background/60">Multi Speciality Hi-Tech Clinic</p>
