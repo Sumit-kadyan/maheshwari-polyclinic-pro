@@ -19,8 +19,8 @@ const collageGroups = [
   {
     width: "w-[300px]",
     items: [
-      { src: clinicCabin, alt: "Doctor's Cabin", h: "h-[240px]" },
-      { src: clinicExterior, alt: "Clinic Exterior", h: "h-[172px]" },
+      { src: clinicCabin, alt: "Doctor consultation cabin at Maheshwari Polyclinic Jaipur", h: "h-[240px]" },
+      { src: clinicExterior, alt: "Maheshwari Polyclinic exterior near Gopalpura Bypass Jaipur", h: "h-[172px]" },
     ],
   },
   {
