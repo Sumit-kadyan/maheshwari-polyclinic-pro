@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Star, Phone, MessageCircle } from "lucide-react";
-import doctorImg from "@/assets/doctor-portrait.jpg";
+import doctorImg from "@/assets/doctor.jpg";
 
 const HeroSection = () => {
   return (

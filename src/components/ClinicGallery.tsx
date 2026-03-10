@@ -1,10 +1,16 @@
 import { motion, useInView, useAnimationFrame } from "framer-motion";
 import { useRef, useState } from "react";
-import clinicInterior from "@/assets/clinic-interior.jpg";
-import clinicExterior from "@/assets/clinic-exterior.jpg";
-import clinicConsultation from "@/assets/clinic-consultation.jpg";
+import clinicInterior from "@/assets/interior-2.jpeg";
+import reception from "@/assets/reception.jpeg";
+import clinicExterior from "@/assets/exterior.jpg";
+import treatment_area from "@/assets/treatment-area.jpg";
+import clinicConsultation from "@/assets/friends.jpeg";
 import doctorImg from "@/assets/doctor-portrait.jpg";
 import clinicCabin from "@/assets/clinic-cabin.jpg";
+import night from "@/assets/exterior-night.jpeg";
+import sitting_area from "@/assets/sitting-area.jpeg";
+import prize from "@/assets/prize.jpeg";
+import award from "@/assets/awards.jpeg";
 import clinicInterior2 from "@/assets/clinic-interior-2.jpg";
 
 // Pre-coded "random" collage layout — each group fills exactly 420px height
@@ -26,42 +32,42 @@ const collageGroups = [
   {
     width: "w-[220px]",
     items: [
-      { src: clinicConsultation, alt: "Consultation room at multi-speciality clinic Jaipur", h: "h-[160px]" },
-      { src: doctorImg, alt: "Dr. Munesh Maheshwari consulting patient in Jaipur", h: "h-[252px]" },
+      { src: treatment_area, alt: "Consultation room at multi-speciality clinic Jaipur", h: "h-[160px]" },
+      { src: clinicConsultation, alt: "Dr. Munesh Maheshwari with his foreign friends", h: "h-[252px]" },
     ],
   },
   {
     width: "w-[280px]",
     items: [
-      { src: clinicExterior, alt: "Maheshwari Polyclinic entrance near Triveni Nagar Jaipur", h: "h-[280px]" },
+      { src: reception, alt: "Reception area of Maheshwari Polyclinic Jaipur", h: "h-[280px]" },
       { src: clinicInterior2, alt: "Modern interior of Maheshwari Polyclinic Jaipur", h: "h-[132px]" },
     ],
   },
   {
     width: "w-[240px]",
     items: [
-      { src: clinicConsultation, alt: "Modern medical equipment at polyclinic near Gopalpura Jaipur", h: "h-[190px]" },
-      { src: clinicExterior, alt: "Reception area of Maheshwari Polyclinic Jaipur", h: "h-[222px]" },
+      { src: sitting_area, alt: "Modern Waiting area of Maheshwari Polyclinic Jaipur", h: "h-[190px]" },
+      { src: award, alt: "Awards and certificates at Maheshwari Polyclinic Jaipur", h: "h-[222px]" },
     ],
   },
   {
     width: "w-[270px]",
     items: [
-      { src: doctorImg, alt: "Patient care by Dr. Munesh Maheshwari critical care specialist Jaipur", h: "h-[420px]" },
+      { src: prize, alt: "Dr. Munesh Maheshwari holding a certificate ", h: "h-[420px]" },
     ],
   },
   {
     width: "w-[300px]",
     items: [
       { src: clinicInterior2, alt: "Awards and certificates at Maheshwari Polyclinic Jaipur", h: "h-[170px]" },
-      { src: clinicCabin, alt: "Hi-tech clinic facilities near Gopalpura Bypass Jaipur", h: "h-[242px]" },
+      { src: night, alt: "Maheshwari Polyclinic exterior near Gopalpura Bypass Jaipur", h: "h-[242px]" },
     ],
   },
   {
     width: "w-[250px]",
     items: [
       { src: clinicExterior, alt: "Maheshwari Polyclinic building near Triveni Nagar Jaipur", h: "h-[300px]" },
-      { src: clinicInterior, alt: "Diagnostic lab area at best clinic in Gopalpura Jaipur", h: "h-[112px]" },
+      { src: clinicInterior, alt: "Waiting area of Maheshwari Polyclinic Jaipur", h: "h-[112px]" },
     ],
   },
 ];

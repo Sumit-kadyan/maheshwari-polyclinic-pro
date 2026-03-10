@@ -1,7 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { CheckCircle } from "lucide-react";
-import doctorImg from "@/assets/doctor-portrait.jpg";
+import doctor_Img from "@/assets/doctor-portrait-big.png";
 
 const credentials = [
   "Critical Care Specialist – Rajasthan Hospital",
@@ -34,7 +34,7 @@ const AboutDoctor = () => {
           >
             <div className="rounded-3xl overflow-hidden" style={{ boxShadow: "var(--shadow-elevated)" }}>
               <img
-                src={doctorImg}
+                src={doctor_Img}
                 alt="Dr. Munesh Maheshwari - Experienced Physician and Critical Care Doctor in Jaipur"
                 className="w-full aspect-[4/5] object-cover object-top"
                 loading="lazy"
