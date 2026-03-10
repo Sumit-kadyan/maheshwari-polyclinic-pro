@@ -35,7 +35,7 @@ const AboutDoctor = () => {
             <div className="rounded-3xl overflow-hidden" style={{ boxShadow: "var(--shadow-elevated)" }}>
               <img
                 src={doctorImg}
-                alt="Dr. Munesh Maheshwari"
+                alt="Dr. Munesh Maheshwari - Experienced Physician and Critical Care Doctor in Jaipur"
                 className="w-full aspect-[4/5] object-cover object-top"
                 loading="lazy"
               />
