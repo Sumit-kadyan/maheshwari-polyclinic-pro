@@ -13,8 +13,6 @@ import prize from "@/assets/prize.jpeg";
 import award from "@/assets/awards.jpeg";
 import clinicInterior2 from "@/assets/clinic-interior-2.jpg";
 
-// Pre-coded "random" collage layout — each group fills exactly 420px height
-// Groups are columns; items within a group stack vertically with a 8px gap
 const collageGroups = [
   {
     width: "w-[260px]",
@@ -72,28 +70,47 @@ const collageGroups = [
   },
 ];
 
+const GalleryStrip = ({ groups, isInView, offset }: { groups: typeof collageGroups; isInView: boolean; offset: number }) => {
+  let itemIndex = offset;
+  return (
+    <>
+      {groups.map((group, gi) => (
+        <div key={gi} className={`flex-shrink-0 ${group.width} flex flex-col gap-2 h-[420px]`}>
+          {group.items.map((img) => {
+            const i = itemIndex++;
+            return (
+              <motion.div
+                key={`${img.alt}-${i}`}
+                initial={{ opacity: 0, scale: 0.92 }}
+                animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                transition={{ duration: 0.6, delay: Math.min(i, 8) * 0.06, ease: [0.32, 0.72, 0, 1] }}
+                className={`w-full ${img.h} rounded-2xl overflow-hidden group relative`}
+              >
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <p className="absolute bottom-3 left-4 text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-2 group-hover:translate-y-0">
+                  {img.alt}
+                </p>
+              </motion.div>
+            );
+          })}
+        </div>
+      ))}
+    </>
+  );
+};
+
 const ClinicGallery = () => {
   const sectionRef = useRef(null);
-  const scrollRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
-  const isSectionVisible = useInView(sectionRef, { amount: 0.2 });
   const [isHovered, setIsHovered] = useState(false);
-  const scrollX = useRef(0);
 
-  useAnimationFrame((_, delta) => {
-    if (!scrollRef.current || !isSectionVisible || isHovered) return;
-    const container = scrollRef.current;
-    const maxScroll = container.scrollWidth - container.clientWidth;
-    scrollX.current += delta * 0.03;
-    if (scrollX.current >= maxScroll) scrollX.current = 0;
-    container.scrollLeft = scrollX.current;
-  });
-
-  const handleScroll = () => {
-    if (scrollRef.current) scrollX.current = scrollRef.current.scrollLeft;
-  };
-
-  let itemIndex = 0;
+  const totalItems = collageGroups.reduce((sum, g) => sum + g.items.length, 0);
 
   return (
     <section className="section-padding overflow-hidden" ref={sectionRef}>
@@ -107,40 +124,21 @@ const ClinicGallery = () => {
       </div>
 
       <div
-        ref={scrollRef}
+        className="overflow-hidden"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        onScroll={handleScroll}
-        className="flex gap-2 overflow-x-auto px-6 pb-4 cursor-grab active:cursor-grabbing"
-        style={{ scrollbarWidth: "none", msOverflowStyle: "none", WebkitOverflowScrolling: "touch" }}
       >
-        {collageGroups.map((group, gi) => (
-          <div key={gi} className={`flex-shrink-0 ${group.width} flex flex-col gap-2 h-[420px]`}>
-            {group.items.map((img) => {
-              const i = itemIndex++;
-              return (
-                <motion.div
-                  key={`${img.alt}-${i}`}
-                  initial={{ opacity: 0, scale: 0.92 }}
-                  animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                  transition={{ duration: 0.6, delay: i * 0.06, ease: [0.32, 0.72, 0, 1] }}
-                  className={`w-full ${img.h} rounded-2xl overflow-hidden group relative`}
-                >
-                  <img
-                    src={img.src}
-                    alt={img.alt}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <p className="absolute bottom-3 left-4 text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-2 group-hover:translate-y-0">
-                    {img.alt}
-                  </p>
-                </motion.div>
-              );
-            })}
-          </div>
-        ))}
+        <div
+          className="flex gap-2 px-6 pb-4"
+          style={{
+            animation: "gallery-scroll 40s linear infinite",
+            animationPlayState: isHovered ? "paused" : "running",
+            width: "max-content",
+          }}
+        >
+          <GalleryStrip groups={collageGroups} isInView={isInView} offset={0} />
+          <GalleryStrip groups={collageGroups} isInView={isInView} offset={totalItems} />
+        </div>
       </div>
     </section>
   );

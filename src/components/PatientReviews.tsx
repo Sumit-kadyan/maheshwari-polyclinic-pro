@@ -3,12 +3,12 @@ import { useRef, useState, useEffect, useCallback } from "react";
 import { Star, ArrowLeft, ArrowRight, Quote } from "lucide-react";
 
 const reviews = [
-  { name: "Rajesh K.", location: "Gopalpura, Jaipur", text: "Exceptional care and attention to detail. Dr. Maheshwari is truly one of the best physicians in Jaipur. Highly recommended!", avatar: "RK" },
-  { name: "Priya S.", location: "Triveni Nagar, Jaipur", text: "The clinic is modern and well-equipped. I was impressed by the digital prescription system and the overall professionalism.", avatar: "PS" },
-  { name: "Anil M.", location: "Malviya Nagar, Jaipur", text: "Dr. Maheshwari's expertise in critical care saved my father's life. We are forever grateful for his dedication and skill.", avatar: "AM" },
-  { name: "Sunita D.", location: "Vaishali Nagar, Jaipur", text: "Very clean and organized clinic. The online video consultation feature is extremely convenient. Great experience overall.", avatar: "SD" },
-  { name: "Vikram T.", location: "Mansarovar, Jaipur", text: "Best polyclinic near Gopalpura. The staff is courteous and the doctor takes time to explain everything thoroughly.", avatar: "VT" },
-  { name: "Meena R.", location: "C-Scheme, Jaipur", text: "I've been consulting Dr. Maheshwari for chronic disease management. His treatment plans are effective and well-thought-out.", avatar: "MR" },
+  { name: "Kareena K.", location: "Google Review", text: "I really appreciate you taking the time to explain everything to me. Your calm presence and positive attitude are very reassuring.", avatar: "KK" },
+  { name: "Rohit G.", location: "Google Review", text: "Strongly recommend to visit ...very much experience and friendly nature.", avatar: "RG" },
+  { name: "Devanand M.", location: "Google Review", text: "He is our family doctor for more than 15 years. His approach towards diagnosis and it's treatment is always on Bulls eye. We highly recommend him.", avatar: "DM" },
+  { name: "Suneel M.", location: "Google Review", text: "DR.Munesh Maheshwari one of the best doctor,  Most trusted Doctor and very helpful and personal caring. Thank you very much for your support and care.", avatar: "SM" },
+  { name: "Vikram K.", location: "Google Review", text: "Excellent dr. With in depth knowledge,  always talk to patient to give them confidence! Fair treatment with proper medication...", avatar: "VK" },
+  { name: "Vishal M.", location: "Google Review", text: "Humble behavior ❤️,great human being, best doctor Hatts sir to uhh", avatar: "VM" },
 ];
 
 const ReviewCard = ({
