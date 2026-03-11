@@ -26,8 +26,8 @@ const HeroSection = () => {
             </div>
 
             <h1 className="section-title !text-4xl sm:!text-5xl lg:!text-6xl !leading-tight mb-6">
-              Maheshwari Polyclinic – Trusted Critical Care{" "}
-              <span className="gradient-text">Specialist</span>{" "}
+              Maheshwari Polyclinic – Trusted{" "}
+              <span className="gradient-text">Physician</span>{" "}
               in Jaipur
             </h1>
 

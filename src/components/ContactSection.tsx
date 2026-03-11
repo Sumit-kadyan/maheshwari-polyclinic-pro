@@ -12,7 +12,7 @@ const ContactSection = () => {
         <div className="text-center mb-14">
           <span className="inline-block text-[11px] font-semibold uppercase tracking-[0.2em] text-primary bg-accent/60 px-4 py-1.5 rounded-full mb-5">Contact</span>
           <h2 className="section-title mt-3">
-            Contact <span className="gradient-text">Information</span>
+            Get in <span className="gradient-text">Touch</span>
           </h2>
           <p className="section-subtitle">
             Ready to book your appointment? Reach out to us through any of the channels below.

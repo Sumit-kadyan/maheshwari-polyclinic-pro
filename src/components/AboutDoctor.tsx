@@ -47,11 +47,11 @@ const AboutDoctor = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            <span className="inline-block text-[11px] font-semibold uppercase tracking-[0.2em] text-primary bg-accent/60 px-4 py-1.5 rounded-full mb-5">About the Doctor</span>
+            <span className="inline-block text-[11px] font-semibold uppercase tracking-[0.2em] text-primary bg-accent/60 px-4 py-1.5 rounded-full mb-5">Meet the Doctor</span>
             <h2 className="section-title mt-3 mb-2">
               About Dr. Munesh <span className="gradient-text">Maheshwari</span>
             </h2>
-            <p className="text-lg font-medium text-primary mb-6">Critical Care Specialist (Physician)</p>
+            <p className="text-lg font-medium text-primary mb-6">Critical Care Specialist & Physician</p>
 
             <p className="text-muted-foreground leading-relaxed mb-8">
               With extensive training from internationally acclaimed institutions including

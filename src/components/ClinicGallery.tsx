@@ -118,7 +118,7 @@ const ClinicGallery = () => {
         <div className="text-center mb-14">
           <span className="inline-block text-[11px] font-semibold uppercase tracking-[0.2em] text-primary bg-accent/60 px-4 py-1.5 rounded-full mb-5">Gallery</span>
           <h2 className="section-title mt-3">
-            Clinic <span className="gradient-text">Gallery</span>
+            Inside Our <span className="gradient-text">Clinic</span>
           </h2>
         </div>
       </div>

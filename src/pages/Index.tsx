@@ -11,10 +11,12 @@ import LocationSection from "@/components/LocationSection";
 import ContactSection from "@/components/ContactSection";
 import FloatingButtons from "@/components/FloatingButtons";
 import Footer from "@/components/Footer";
+import CursorFollower from "@/components/CursorFollower";
 
 const Index = () => {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background cursor-none">
+      <CursorFollower />
       <Navbar />
       <HeroSection />
       <TrustIndicators />

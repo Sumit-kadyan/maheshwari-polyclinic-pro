@@ -67,7 +67,7 @@ const TechnologySection = () => {
           </span>
           <h2 className="section-title mt-3">
             Modern Digital{" "}
-            <span className="gradient-text">Healthcare</span> Technology
+            <span className="gradient-text">Hi-tech</span> Clinic
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto mt-5 leading-relaxed">
             Powered by Medichain smart clinic technology, we deliver a seamless
