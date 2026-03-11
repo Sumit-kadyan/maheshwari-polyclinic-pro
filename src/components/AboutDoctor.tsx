@@ -1,7 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { CheckCircle } from "lucide-react";
-import doctor_Img from "@/assets/doctor-portrait-big.png";
+import doctor_Img from "@/assets/doctor-portrait-big.PNG";
 
 const credentials = [
   "Critical Care Specialist – Rajasthan Hospital",

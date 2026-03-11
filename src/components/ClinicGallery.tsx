@@ -2,7 +2,7 @@ import { motion, useInView, useAnimationFrame } from "framer-motion";
 import { useRef, useState } from "react";
 import clinicInterior from "@/assets/interior-2.jpeg";
 import reception from "@/assets/reception.jpeg";
-import clinicExterior from "@/assets/exterior.jpg";
+import clinicExterior from "@/assets/exterior.JPG";
 import treatment_area from "@/assets/treatment-area.jpg";
 import clinicConsultation from "@/assets/friends.jpeg";
 import doctorImg from "@/assets/doctor-portrait.jpg";
