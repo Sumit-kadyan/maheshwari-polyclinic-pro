@@ -11,7 +11,7 @@ const indicators = [
   },
   {
     icon: Users,
-    title: "239+ Patient Reviews",
+    title: "Global Patient Trust",
     description: "Trusted by hundreds of patients with a perfect 5.0 Google rating",
   },
   {

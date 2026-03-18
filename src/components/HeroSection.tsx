@@ -33,7 +33,7 @@ const HeroSection = () => {
 
             <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-xl">
               Experience compassionate, world-class medical care at Maheshwari Polyclinic.
-              Dr. Munesh Maheshwari brings internationally trained critical care expertise
+              Dr. Munesh Maheshwari brings internationally trained physician expertise
               to every patient.
             </p>
 

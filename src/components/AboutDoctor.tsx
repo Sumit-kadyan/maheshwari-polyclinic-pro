@@ -54,9 +54,7 @@ const AboutDoctor = () => {
             <p className="text-lg font-medium text-primary mb-6">Critical Care Specialist & Physician</p>
 
             <p className="text-muted-foreground leading-relaxed mb-8">
-              With extensive training from internationally acclaimed institutions including
-              Johns Hopkins University Hospital and FCCS certification from the USA, Dr. Maheshwari
-              brings world-class critical care expertise to Jaipur. His commitment to patient-centered
+            With extensive training and FCCS certification from the USA, Dr. Maheshwari brings world-class critical care expertise to Jaipur. His commitment to patient-centered
               care and modern medical practices has earned him the trust of hundreds of patients.
             </p>
 
