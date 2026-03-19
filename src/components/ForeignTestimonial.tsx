@@ -30,15 +30,13 @@ const ForeignTestimonial = () => {
                   "0 20px 60px -12px hsl(var(--primary) / 0.12), 0 8px 24px -8px hsl(var(--primary) / 0.08)",
               }}
             >
-              {/* Placeholder – replace src with actual video */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-primary/10 via-accent/30 to-primary/5">
-                <div className="w-20 h-20 rounded-full gradient-primary flex items-center justify-center mb-4 shadow-lg">
-                  <Play size={32} className="text-primary-foreground ml-1" />
-                </div>
-                <p className="text-muted-foreground text-sm font-medium">
-                  Video coming soon
-                </p>
-              </div>
+              <video
+                src="/videos/foreign-patient-review.mp4"
+                className="absolute inset-0 w-full h-full object-cover"
+                controls
+                playsInline
+                preload="metadata"
+              />
 
               {/* Globe badge */}
               <div className="absolute top-4 left-4 flex items-center gap-1.5 bg-card/90 backdrop-blur-sm rounded-full px-3 py-1.5 border border-border/40 shadow-sm">
