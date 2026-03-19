@@ -25,6 +25,7 @@ const Index = () => {
       <ServicesSection />
       <TechnologySection />
       <PatientReviews />
+      <ForeignTestimonial />
       <ClinicGallery />
       <ConsultationTimings />
       <LocationSection />
