@@ -11,6 +11,10 @@ import night from "@/assets/exterior-night.jpeg";
 import sitting_area from "@/assets/sitting-area.jpeg";
 import prize from "@/assets/prize.jpeg";
 import award from "@/assets/awards.jpeg";
+import hotel1 from "@/assets/hotel1.PNG";
+import hotel2 from "@/assets/hotel2.PNG";
+import hotel3 from "@/assets/hotel3.PNG";
+import hotel4 from "@/assets/hotel4.PNG";
 import clinicInterior2 from "@/assets/clinic-interior-2.jpg";
 
 const collageGroups = [
@@ -66,6 +70,20 @@ const collageGroups = [
     items: [
       { src: clinicExterior, alt: "Maheshwari Polyclinic building near Triveni Nagar Jaipur", h: "h-[300px]" },
       { src: clinicInterior, alt: "Waiting area of Maheshwari Polyclinic Jaipur", h: "h-[112px]" },
+    ],
+  },
+  {
+    width: "w-[270px]",
+    items: [
+      { src: hotel1, alt: "Dr. Munesh Maheshwari consulataing a patient at hotel ", h: "h-[280px]" },
+      { src: hotel4, alt: "Dr. Munesh Maheshwari treating a patient at hotel", h: "h-[420px]" },
+    ],
+  },
+  {
+    width: "w-[280px]",
+    items: [
+      { src: hotel2, alt: "Dr. Munesh Maheshwari consulataing a patient at hotel ", h: "h-[400px]" },
+      { src: hotel3, alt: "Dr. Munesh Maheshwari with a patient at hotel", h: "h-[280px]" },
     ],
   },
 ];
