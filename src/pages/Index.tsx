@@ -23,6 +23,7 @@ const Index = () => {
       <HeroSection />
       <TrustIndicators />
       <AboutDoctor />
+      <AcademicAchievements />
       <ServicesSection />
       <TechnologySection />
       <PatientReviews />
