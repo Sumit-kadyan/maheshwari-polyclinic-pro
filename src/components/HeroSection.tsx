@@ -95,7 +95,7 @@ const HeroSection = () => {
                 className="absolute -bottom-4 -left-4 sm:-left-8 bg-card rounded-2xl p-4 shadow-lg border border-border"
               >
                 <p className="font-heading font-bold text-sm text-foreground">Dr. Munesh Maheshwari</p>
-                <p className="text-xs text-muted-foreground">Critical Care Specialist</p>
+                <p className="text-xs text-muted-foreground">Physician & Critical Care Specialist</p>
                 <p className="text-xs text-primary font-medium mt-1">FCCS USA · IDCCM</p>
               </motion.div>
             </div>
