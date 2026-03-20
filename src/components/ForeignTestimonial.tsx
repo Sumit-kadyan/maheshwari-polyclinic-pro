@@ -1,10 +1,26 @@
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
-import { Play, Globe, Star, Quote } from "lucide-react";
+import { useRef, useState } from "react";
+import { Play, Pause, Globe, Star, Quote } from "lucide-react";
+import video from "@/assets/maheshwari.webm";
 
 const ForeignTestimonial = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const togglePlay = () => {
+    if (!videoRef.current) return;
+  
+    if (isPlaying) {
+      videoRef.current.pause();
+    } else {
+      videoRef.current.play();
+    }
+  
+    setIsPlaying(!isPlaying);
+  };
+
   return (
     <section
       className="section-padding bg-gradient-to-b from-background via-accent/20 to-background overflow-hidden"
@@ -30,14 +46,41 @@ const ForeignTestimonial = () => {
               }}
             >
 
-              {/* Placeholder – replace src with actual video */}
-              <video
-                src="/maheswari.webm"
-                className="absolute inset-0 w-full h-full object-cover"
-                controls
-                playsInline
-                preload="metadata"
-              />
+              <div className="relative w-full h-full group">
+                {/* Video */}
+                  <video
+                    ref={videoRef}
+                    src={video}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    playsInline
+                    preload="metadata"
+                  />
+
+                {/* Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent pointer-events-none" />
+
+                {/* Play Overlay */}
+                {!isPlaying && (
+                  <div className="absolute inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center">
+                    <button
+                      onClick={togglePlay}
+                      className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300"
+                    >
+                    <Play className="text-black ml-1" size={28} />
+                    </button>
+                  </div>
+                )}
+
+                {/* Pause Button */}
+                {isPlaying && (
+                  <button
+                    onClick={togglePlay}
+                    className="absolute bottom-4 right-4 w-10 h-10 rounded-full bg-black/60 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition"
+                  >
+                  <Pause className="text-white" size={16} />
+                  </button>
+                )}
+              </div>
 
               {/* Globe badge */}
               <div className="absolute top-4 left-4 flex items-center gap-1.5 bg-card/90 backdrop-blur-sm rounded-full px-3 py-1.5 border border-border/40 shadow-sm">
@@ -69,17 +112,16 @@ const ForeignTestimonial = () => {
                   className="absolute -left-[11px] -top-1 text-primary/40 bg-background"
                 />
                 <p className="text-muted-foreground leading-relaxed text-sm sm:text-base font-light italic">
-                  "I must say Dr. Munesh is the best doctor
-                  atleast in Jaipur, when i take India."
+                  "I must say, Dr. Munish I think is the best doctor in at least Jaipur but I think India."
                 </p>
               </div>
               <div className="flex items-center gap-3 mt-1">
                 <div className="w-10 h-10 rounded-full gradient-primary flex items-center justify-center text-primary-foreground font-heading font-bold text-sm">
-                  IP
+                  G
                 </div>
                 <div>
                   <p className="font-heading font-semibold text-foreground text-sm">
-                    International Patient
+                    Guest from Italy
                   </p>
                   <div className="flex items-center gap-1">
                     {[...Array(5)].map((_, i) => (
