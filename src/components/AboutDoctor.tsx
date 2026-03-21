@@ -51,11 +51,10 @@ const AboutDoctor = () => {
             <h2 className="section-title mt-3 mb-2">
               About Dr. Munesh <span className="gradient-text">Maheshwari</span>
             </h2>
-            <p className="text-lg font-medium text-primary mb-6">Critical Care Specialist & Physician</p>
+            <p className="text-lg font-medium text-primary mb-6">Critical Care Specialist & Physician</p><span className="text-secondary font-bold">26+ Years Experience</span></p>
 
             <p className="text-muted-foreground leading-relaxed mb-8">
-            With extensive training and FCCS certification from the USA, Dr. Maheshwari brings world-class critical care expertise to Jaipur. His commitment to patient-centered
-              care and modern medical practices has earned him the trust of hundreds of patients.
+            With over 26 years of experience, Dr. Maheshwari is a highly trusted Physician and Critical Care Specialist in Jaipur, FCCS-certified (USA) and currently associated with most of the city’s top hospitals; known for his precise diagnosis, patient-focused approach, and commitment to modern medical practices, he has consistently delivered reliable results and earned the trust of numerous patients.
             </p>
 
             <div className="mb-8">
