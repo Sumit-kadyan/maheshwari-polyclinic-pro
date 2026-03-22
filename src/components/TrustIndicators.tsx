@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Award, Users, Monitor, Siren } from "lucide-react";
+import { Award, Star, Users, Monitor, Siren } from "lucide-react";
 
 const indicators = [
   {
@@ -12,7 +12,7 @@ const indicators = [
   {
     icon: Users,
     title: "Global Patient Trust",
-    description: "Trusted by hundreds of patients with a perfect 5.0 Google rating",
+    description: "Trusted by hundreds of patients with a perfect 5.0⭐ Google rating",
   },
   {
     icon: Monitor,
