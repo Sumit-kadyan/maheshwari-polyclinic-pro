@@ -28,7 +28,7 @@ const HeroSection = () => {
             <h1 className="section-title !text-4xl sm:!text-5xl lg:!text-6xl !leading-tight mb-6">
               Maheshwari Polyclinic – Trusted{" "}
               <span className="gradient-text">Physician</span>{" "}
-              in Jaipur
+              in Jaipur, India
             </h1>
 
             <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-xl">
