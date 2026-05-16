@@ -174,10 +174,10 @@ const ConsultationTimings = () => {
             </div>
             <div>
               <h3 className="font-heading font-semibold text-foreground text-[15px] leading-snug">
-                24 Hour Emergency Service
+                Clinic Open 24 Hours
               </h3>
               <p className="text-sm text-muted-foreground mt-0.5">
-                Ambulance & hospital support
+                Emergency, ambulance & hospital support
               </p>
             </div>
           </div>
