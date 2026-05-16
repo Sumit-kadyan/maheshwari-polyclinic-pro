@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Clock, Sunset, Video, Siren } from "lucide-react";
+import { Clock, Video, Siren } from "lucide-react";
 
 const ConsultationTimings = () => {
   const ref = useRef(null);
