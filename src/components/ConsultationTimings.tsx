@@ -30,6 +30,9 @@ const ConsultationTimings = () => {
           <h2 className="section-title mt-3">
             Consultation <span className="gradient-text">Hours</span>
           </h2>
+          <p className="text-sm sm:text-base text-muted-foreground mt-4 max-w-xl mx-auto">
+            Clinic open <span className="font-semibold text-foreground">24 hours</span> — doctor consultation available during the slots below.
+          </p>
         </motion.div>
 
         {/* Main Schedule Panels */}
@@ -171,10 +174,10 @@ const ConsultationTimings = () => {
             </div>
             <div>
               <h3 className="font-heading font-semibold text-foreground text-[15px] leading-snug">
-                24 Hour Emergency Service
+                Clinic Open 24 Hours
               </h3>
               <p className="text-sm text-muted-foreground mt-0.5">
-                Ambulance & hospital support
+                Emergency, ambulance & hospital support
               </p>
             </div>
           </div>
