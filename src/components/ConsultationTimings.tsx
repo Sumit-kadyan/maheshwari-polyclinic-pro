@@ -35,14 +35,13 @@ const ConsultationTimings = () => {
           </p>
         </motion.div>
 
-        {/* Main Schedule Panels */}
+        {/* Main 24/7 Panel */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.55, delay: 0.15 }}
           className="mb-8 lg:mb-10"
         >
-          {/* Morning */}
           <div
             className="group relative overflow-hidden rounded-3xl bg-card/80 backdrop-blur-sm p-10 sm:p-14 lg:p-16 flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-1"
             style={{
@@ -65,6 +64,7 @@ const ConsultationTimings = () => {
                   "radial-gradient(ellipse at top, hsl(210 80% 95% / 0.6), transparent 60%)",
               }}
             />
+
             <div className="relative">
               <div
                 className="w-20 h-20 rounded-2xl flex items-center justify-center mb-6 mx-auto transition-all duration-300 group-hover:scale-105"
@@ -75,10 +75,12 @@ const ConsultationTimings = () => {
               >
                 <Clock className="text-primary" size={34} strokeWidth={1.8} />
               </div>
+
               <span className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-primary bg-accent/60 px-3 py-1 rounded-full mb-4">
                 <span className="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse-soft" />
                 Always Open
               </span>
+
               <p className="text-5xl sm:text-6xl lg:text-7xl font-heading font-bold gradient-text tracking-tight leading-none">
                 24 / 7
               </p>
@@ -159,7 +161,7 @@ const ConsultationTimings = () => {
                 Clinic Open 24 Hours
               </h3>
               <p className="text-sm text-muted-foreground mt-0.5">
-                Ambulance & hospital support
+                Emergency, ambulance & hospital support
               </p>
             </div>
           </div>

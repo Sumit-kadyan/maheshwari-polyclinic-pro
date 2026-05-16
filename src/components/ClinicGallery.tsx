@@ -2,20 +2,21 @@ import { motion, useInView, useAnimationFrame } from "framer-motion";
 import { useRef, useState } from "react";
 import clinicInterior from "@/assets/interior-2.jpeg";
 import reception from "@/assets/reception.jpeg";
-import clinicExterior from "@/assets/exterior.JPG";
-import treatment_area from "@/assets/treatment-area.JPG";
+import clinicExterior from "@/assets/exterior.jpg";
+import treatment_area from "@/assets/treatment-area.jpg";
 import clinicConsultation from "@/assets/friends.jpeg";
 import doctorImg from "@/assets/doctor-portrait.jpg";
 import clinicCabin from "@/assets/clinic-cabin.jpg";
 import night from "@/assets/exterior-night.jpeg";
 import sitting_area from "@/assets/sitting-area.jpeg";
 import hotel5 from "@/assets/hotel5.jpeg";
+import prize from "@/assets/prize1.jpeg";
 import home from "@/assets/home.jpeg";
 import award from "@/assets/awards.jpeg";
-import hotel1 from "@/assets/hotel1.PNG";
-import hotel2 from "@/assets/hotel2.PNG";
-import hotel3 from "@/assets/hotel3.PNG";
-import hotel4 from "@/assets/hotel4.PNG";
+import hotel1 from "@/assets/hotel1.png";
+import hotel2 from "@/assets/hotel2.png";
+import hotel3 from "@/assets/hotel3.png";
+import hotel4 from "@/assets/hotel4.png";
 import clinicInterior2 from "@/assets/clinic-interior-2.jpg";
 
 const collageGroups = [
@@ -93,7 +94,7 @@ const collageGroups = [
       { src: hotel5, alt: "Dr. Munesh Maheshwari consulataing a tourist patient at hotel ", h: "h-[270px]" },
       { src: home, alt: "Dr. Munesh Maheshwari with a happy patient after home treatment", h: "h-[410px]" },
     ],
-  },
+  }
 ];
 
 const GalleryStrip = ({ groups, isInView, offset }: { groups: typeof collageGroups; isInView: boolean; offset: number }) => {
