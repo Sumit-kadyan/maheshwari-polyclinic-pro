@@ -9,7 +9,8 @@ import doctorImg from "@/assets/doctor-portrait.jpg";
 import clinicCabin from "@/assets/clinic-cabin.jpg";
 import night from "@/assets/exterior-night.jpeg";
 import sitting_area from "@/assets/sitting-area.jpeg";
-import prize from "@/assets/prize.jpeg";
+import hotel5 from "@/assets/hotel5.jpeg";
+import home from "@/assets/home.jpeg";
 import award from "@/assets/awards.jpeg";
 import hotel1 from "@/assets/hotel1.PNG";
 import hotel2 from "@/assets/hotel2.PNG";
@@ -84,6 +85,13 @@ const collageGroups = [
     items: [
       { src: hotel2, alt: "Dr. Munesh Maheshwari consulataing a patient at hotel ", h: "h-[400px]" },
       { src: hotel3, alt: "Dr. Munesh Maheshwari with a patient at hotel", h: "h-[280px]" },
+    ],
+  },
+  {
+    width: "w-[280px]",
+    items: [
+      { src: hotel5, alt: "Dr. Munesh Maheshwari consulataing a tourist patient at hotel ", h: "h-[270px]" },
+      { src: home, alt: "Dr. Munesh Maheshwari with a happy patient after home treatment", h: "h-[410px]" },
     ],
   },
 ];
