@@ -2,8 +2,8 @@ import { motion, useInView, useAnimationFrame } from "framer-motion";
 import { useRef, useState } from "react";
 import clinicInterior from "@/assets/interior-2.jpeg";
 import reception from "@/assets/reception.jpeg";
-import clinicExterior from "@/assets/exterior.jpg";
-import treatment_area from "@/assets/treatment-area.jpg";
+import clinicExterior from "@/assets/exterior.JPG";
+import treatment_area from "@/assets/treatment-area.JPG";
 import clinicConsultation from "@/assets/friends.jpeg";
 import doctorImg from "@/assets/doctor-portrait.jpg";
 import clinicCabin from "@/assets/clinic-cabin.jpg";
@@ -13,10 +13,10 @@ import hotel5 from "@/assets/hotel5.jpeg";
 import prize from "@/assets/prize1.jpeg";
 import home from "@/assets/home.jpeg";
 import award from "@/assets/awards.jpeg";
-import hotel1 from "@/assets/hotel1.png";
-import hotel2 from "@/assets/hotel2.png";
-import hotel3 from "@/assets/hotel3.png";
-import hotel4 from "@/assets/hotel4.png";
+import hotel1 from "@/assets/hotel1.PNG";
+import hotel2 from "@/assets/hotel2.PNG";
+import hotel3 from "@/assets/hotel3.PNG";
+import hotel4 from "@/assets/hotel4.PNG";
 import clinicInterior2 from "@/assets/clinic-interior-2.jpg";
 
 const collageGroups = [
