@@ -31,7 +31,7 @@ const ConsultationTimings = () => {
             Consultation <span className="gradient-text">Hours</span>
           </h2>
           <p className="text-sm sm:text-base text-muted-foreground mt-4 max-w-xl mx-auto">
-            Clinic open <span className="font-semibold text-foreground">24 hours</span> — doctor consultation available during the slots below.
+            Clinic open <span className="font-semibold text-foreground">24 hours a day</span> — walk in or call anytime for consultation and emergency care.
           </p>
         </motion.div>
 
