@@ -5,11 +5,12 @@ import doctorImg from "@/assets/doctor.JPG";
 const HeroSection = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center gradient-hero overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-20 right-0 w-[500px] h-[500px] rounded-full bg-primary/5 blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-accent/30 blur-3xl" />
+      {/* Decorative elements - Added pointer-events-none to prevent blocking clicks */}
+      <div className="absolute top-20 right-0 w-[500px] h-[500px] rounded-full bg-primary/5 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-accent/30 blur-3xl pointer-events-none" />
 
-      <div className="section-container section-padding w-full pt-28 sm:pt-32">
+      {/* Main Content Container - Added relative z-10 to bring content to the foreground */}
+      <div className="relative z-10 section-container section-padding w-full pt-28 sm:pt-32">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Text Content */}
           <motion.div
