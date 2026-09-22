@@ -4,6 +4,7 @@ import TrustIndicators from "@/components/TrustIndicators";
 import AboutDoctor from "@/components/AboutDoctor";
 import AcademicAchievements from "@/components/AcademicAchievements";
 import ServicesSection from "@/components/ServicesSection";
+import SuccessStories from "@/components/SuccessStories";
 import TechnologySection from "@/components/TechnologySection";
 import PatientReviews from "@/components/PatientReviews";
 import ForeignTestimonial from "@/components/ForeignTestimonial";
@@ -25,6 +26,7 @@ const Index = () => {
       <AboutDoctor />
       <AcademicAchievements />
       <ServicesSection />
+      <SuccessStories />
       <TechnologySection />
       <PatientReviews />
       <ForeignTestimonial />
