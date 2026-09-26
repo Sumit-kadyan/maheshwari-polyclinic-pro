@@ -36,11 +36,11 @@ const successStories = [
     description: "Dehydration and illness were successfully managed on-site, restoring their health and peace of mind."
   },
   {
-    // Client input: Elderly patient with hand injury treated at clinic
-    image: "/0004.jpeg", 
-    title: "Gentle Care for Seniors",
-    meta: "Elderly Patient • Clinic Visit",
-    description: "A painful hand injury was treated with expert care and compassion, ensuring a smooth healing process."
+    // Client input: Time of procedure of ICu & cardiac like TAVI
+    image: "/0009.jpeg", 
+    title: "Advanced Cardiac Support",
+    meta: "ICU Management • TAVI",
+    description: "Expert critical care and precise monitoring during and after complex cardiac procedures like TAVI, ensuring optimal recovery."
   },
   {
     // Client input: Foreigner from Australia Severe pain abdomen in mid night managed in hotel

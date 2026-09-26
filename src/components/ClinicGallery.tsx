@@ -17,6 +17,8 @@ import hotel1 from "@/assets/hotel1.PNG";
 import hotel2 from "@/assets/hotel2.PNG";
 import hotel3 from "@/assets/hotel3.PNG";
 import hotel4 from "@/assets/hotel4.PNG";
+import old from "/0004.jpeg";
+import a10 from "/0010.jpeg";
 import clinicInterior2 from "@/assets/clinic-interior-2.jpg";
 
 const collageGroups = [
@@ -68,6 +70,12 @@ const collageGroups = [
     ],
   },
   {
+    width: "w-[270px]",
+    items: [
+      { src: a10, alt: "Dr. Munesh Maheshwari receiving award from speaker on doctor's day ", h: "h-[680px]" }
+    ],
+  },
+  {
     width: "w-[250px]",
     items: [
       { src: clinicExterior, alt: "Maheshwari Polyclinic building near Triveni Nagar Jaipur", h: "h-[300px]" },
@@ -84,6 +92,12 @@ const collageGroups = [
   {
     width: "w-[280px]",
     items: [
+      { src: old, alt: "A painful hand injury was treated with expert care and compassion, ensuring a smooth healing process.", h: "h-[680px]" }
+    ],
+  },
+  {
+    width: "w-[280px]",
+    items: [
       { src: hotel2, alt: "Dr. Munesh Maheshwari consulataing a patient at hotel ", h: "h-[400px]" },
       { src: hotel3, alt: "Dr. Munesh Maheshwari with a patient at hotel", h: "h-[280px]" },
     ],
@@ -94,7 +108,7 @@ const collageGroups = [
       { src: hotel5, alt: "Dr. Munesh Maheshwari consulataing a tourist patient at hotel ", h: "h-[270px]" },
       { src: home, alt: "Dr. Munesh Maheshwari with a happy patient after home treatment", h: "h-[410px]" },
     ],
-  }
+  },
 ];
 
 const GalleryStrip = ({ groups, isInView, offset }: { groups: typeof collageGroups; isInView: boolean; offset: number }) => {
