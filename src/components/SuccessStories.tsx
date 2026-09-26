@@ -104,11 +104,10 @@ const SuccessStories = () => {
       className="relative bg-card" 
       style={{ height: scrollRange > 0 ? `calc(100vh + ${scrollRange}px)` : "auto", minHeight: "100vh" }} 
     >
-      {/* Changed to h-[100dvh] for strict viewport fitting */}
       <div className="sticky top-0 flex h-[100dvh] w-full flex-col overflow-hidden">
         
-        {/* Header - Reduced top padding to free up space */}
-        <div className="w-full pt-12 sm:pt-16 pb-4 z-10 shrink-0">
+        {/* Header */}
+        <div className="w-full pt-24 sm:pt-28 pb-4 z-10 shrink-0">
           <div className="section-container text-center">
             <span className="inline-block text-[11px] font-semibold uppercase tracking-[0.2em] text-primary bg-accent/60 px-4 py-1.5 rounded-full mb-3 sm:mb-4">
               Care in Action
@@ -119,39 +118,57 @@ const SuccessStories = () => {
           </div>
         </div>
 
-        {/* Horizontal Sliding Track - Reduced bottom padding & added min-h-0 */}
-        <div className="flex flex-1 items-center pb-8 sm:pb-12 min-h-0">
+        {/* Horizontal Sliding Track */}
+        <div className="flex flex-1 items-center min-h-0 pt-2 pb-8 sm:pb-12">
           <motion.div 
             ref={carouselRef}
             style={{ x }} 
-            className="flex gap-6 sm:gap-8 px-5 sm:px-10 w-max"
+            className="flex items-center gap-6 sm:gap-8 px-5 sm:px-10 w-max"
           >
             {successStories.map((story, idx) => (
               <article
                 key={idx}
-                // Slightly narrower (350px), capped at 75vh to ensure it never gets cut off
-                className="group relative flex w-[85vw] sm:w-[350px] max-h-[75vh] shrink-0 flex-col overflow-hidden rounded-[2rem] border border-border/50 bg-background transition-colors duration-500 hover:border-primary/20"
+                // Mobile: Vertical. Tablet: Immersive Overlay. Laptop: Side-by-side.
+                className="group relative flex w-[85vw] sm:w-[500px] lg:w-[900px] max-w-[90vw] shrink-0 flex-col sm:block lg:flex lg:flex-row overflow-hidden rounded-[2rem] border border-border/50 bg-background transition-colors duration-500 hover:border-primary/20 sm:aspect-[10.5/7.5] lg:aspect-auto lg:h-auto lg:max-h-full lg:items-center"
                 style={{ boxShadow: "0 10px 40px -10px hsl(var(--primary) / 0.12)" }}
               >
-                {/* Image Side */}
-                <div className="relative w-full aspect-[10.5/7.5] shrink-0 overflow-hidden bg-muted">
+                {/* Image Area */}
+                <div className="relative w-full aspect-[10.5/7.5] sm:absolute sm:inset-0 sm:h-full lg:relative lg:w-[50%] lg:shrink-0 overflow-hidden bg-muted">
                   <img
                     src={story.image}
                     alt={story.title}
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     loading="lazy"
                   />
+                  {/* Dark gradient overlay (Hidden on laptop) */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent lg:hidden" />
+                  
+                  {/* MOBILE ONLY: Title & Meta layered on the image */}
+                  <div className="absolute bottom-0 left-0 w-full p-6 pb-4 sm:hidden flex flex-col justify-end z-10">
+                    <span className="mb-1.5 inline-block text-[11px] font-bold text-white/90 tracking-widest uppercase drop-shadow-md">
+                      {story.meta}
+                    </span>
+                    <h3 className="font-heading text-xl font-bold text-white drop-shadow-md leading-tight">
+                      {story.title}
+                    </h3>
+                  </div>
                 </div>
                 
-                {/* Content Side - Added overflow-y-auto to handle super-short screens securely */}
-                <div className="flex flex-col p-6 sm:p-7 flex-1 overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-                  <span className="mb-2 inline-block text-[11px] font-bold text-secondary tracking-widest uppercase">
-                    {story.meta}
-                  </span>
-                  <h3 className="font-heading text-xl sm:text-2xl font-bold text-foreground mb-2">
-                    {story.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed text-sm">
+                {/* Content Area - Description sits below on mobile, everything overlays on tablet, side-by-side on laptop */}
+                <div className="relative z-10 flex flex-col flex-1 p-6 pt-5 sm:absolute sm:inset-0 sm:justify-end sm:p-8 lg:relative lg:inset-auto lg:justify-center lg:p-12 overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                  
+                  {/* TABLET & LAPTOP ONLY: Title & Meta */}
+                  <div className="hidden sm:block">
+                    <span className="mb-2 sm:mb-3 inline-block text-[11px] font-bold text-white/90 lg:text-secondary tracking-widest uppercase drop-shadow-md lg:drop-shadow-none">
+                      {story.meta}
+                    </span>
+                    <h3 className="font-heading text-xl sm:text-2xl lg:text-3xl font-bold text-white lg:text-foreground mb-2 sm:mb-3 drop-shadow-md lg:drop-shadow-none">
+                      {story.title}
+                    </h3>
+                  </div>
+                  
+                  {/* Description (Visible everywhere, adapts text color automatically) */}
+                  <p className="text-muted-foreground sm:text-white/90 lg:text-muted-foreground leading-relaxed text-sm lg:text-base sm:drop-shadow-md lg:drop-shadow-none">
                     {story.description}
                   </p>
                 </div>
@@ -159,7 +176,6 @@ const SuccessStories = () => {
             ))}
           </motion.div>
         </div>
-
       </div>
     </section>
   );
