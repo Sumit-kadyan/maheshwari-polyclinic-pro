@@ -24,7 +24,7 @@ const LocationSection = () => {
         >
           <div className="lg:col-span-2 rounded-3xl overflow-hidden" style={{ boxShadow: "var(--shadow-card)" }}>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.5!2d75.78!3d26.87!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDUyJzEyLjAiTiA3NcKwNDYnNDguMCJF!5e0!3m2!1sen!2sin!4v1"
+              src="https://maps.google.com/maps?q=Maheshwari+Polyclinic,+Gopalpura+Bypass,+Jaipur&t=&z=15&ie=UTF8&iwloc=A&output=embed"
               width="100%"
               height="400"
               style={{ border: 0 }}
